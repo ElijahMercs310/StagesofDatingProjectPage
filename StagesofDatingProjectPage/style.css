@@ -1,0 +1,121 @@
+ :root{
+    --gradient: linear-gradient(
+     45deg, 
+     rgba(200, 60, 210, 0.7),
+     rgba(180, 60, 210, 0.7),
+     rgba(160, 60, 210, 0.7),
+     rgba(140, 60, 210, 0.7),
+     rgba(120, 60, 210, 0.7),
+     rgba(100, 60, 210, 0.7),
+     rgba(80, 60, 210, 0.7),
+     rgba(60, 60, 210, 0.7),
+     rgba(60, 80, 210, 0.7),
+     rgba(60, 100, 210, 0.7),
+     rgba(60, 120, 210, 0.7),
+     rgba(60, 140, 210, 0.7),
+     rgba(60, 160, 210, 0.7)
+     );
+ }
+ body{
+    padding: 0;
+    margin: 0;
+    font-family: basic-sans, sans-serif;
+    color: black;
+    background: white;
+    background-image: var(--gradient);
+    background-size: 100%;
+    animation: bg-animation 10s infinite alternate;
+ }
+ @keyframes bg-animation{
+    0% {background-position:left}
+    50% {background-position: right}
+    100% {background-position:left}
+ }
+ section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 1200px;
+ }
+ .hidden{
+    opacity: 0;
+    filter:blur(10px);
+    transform: translateX(-100%);
+    transition: all 3s;
+ }
+ .show{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0%);
+ }
+ .titleBox{
+    background: white;
+    width: 450px;
+    padding: 24px;
+    box-shadow: 0 0 24px rgba(0,0,0,0.15);
+ }
+ .title{
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 48px;
+    color: black;
+    line-height: 1;
+    margin: 0;
+    background-image: var(--gradient);
+    background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    transition: background-position 1s;
+ }
+ .title:hover {
+    background-position: right;
+ }
+ .box{
+   background: white;
+    width: 450px;
+    padding: 50px;
+    box-shadow: 0 0 24px rgba(0,0,0,0.15);
+ }
+ .subTitle{
+   margin: 0 0 8px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 48px;
+    color: black;
+    line-height: 1;
+    margin: 0;
+    background-image: var(--gradient);
+    background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    transition: background-position 1s;
+ }
+ .subTitle:hover {
+    background-position: right;
+ }
+ .nice{
+   margin: 0 0 8px;
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    color: black;
+    line-height: 1;
+    margin: 0;
+    background-image: var(--gradient);
+    background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    transition: background-position 1s;
+ }
+ .nice:hover {
+   background-position: right;
+}
+ .picture{
+   text-align: center;
+ }
+ 
